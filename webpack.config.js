@@ -6,7 +6,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'vue-demo-button.js',
-    library: 'VueDemoButton',
+    library: 'XENButton',
     libraryTarget: 'umd',
     umdNamedDefine: true
   },

@@ -1,6 +1,6 @@
 {
   "name": "vue-demo-button-xen",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "一个Vue按钮组件插件，可发布到npm",
   "main": "dist/vue-demo-button.js",
   "scripts": {
