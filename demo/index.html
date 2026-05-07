@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue Demo Button 示例</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+    <script src="../dist/vue-demo-button.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <h1>Vue Demo Button 组件示例</h1>
+
+      <h2>不同类型按钮</h2>
+      <div class="button-group">
+        <my-button></my-button>
+        <my-button type="default">默认按钮</my-button>
+        <my-button type="primary">主要按钮</my-button>
+        <my-button type="success">成功按钮</my-button>
+        <my-button type="warning">警告按钮</my-button>
+        <my-button type="danger">危险按钮</my-button>
+      </div>
+
+      <h2>不同大小按钮</h2>
+      <div class="button-group">
+        <my-button size="small" type="primary">小号按钮</my-button>
+        <my-button size="medium" type="primary">中号按钮</my-button>
+        <my-button size="large" type="primary">大号按钮</my-button>
+      </div>
+
+      <h2>状态演示</h2>
+      <div class="button-group">
+        <my-button type="primary" disabled>禁用状态</my-button>
+        <my-button type="primary" :loading="loading" @click="MyhandleClick">
+          {{ loading ? '加载中...' : '点击加载' }}
+        </my-button>
+      </div>
+    </div>
+
+    <script>
+      new Vue({
+        el: "#app",
+        data() {
+          return {
+            loading: false,
+          };
+        },
+        methods: {
+          MyhandleClick() {
+            this.loading = true;
+            setTimeout(() => {
+              this.loading = false;
+            }, 2000);
+          },
+        },
+      });
+    </script>
+
+    <style>
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial, sans-serif;
+        padding: 40px;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      h1 {
+        color: #333;
+        border-bottom: 2px solid #1890ff;
+        padding-bottom: 10px;
+      }
+
+      h2 {
+        color: #666;
+        margin-top: 30px;
+        font-size: 16px;
+      }
+
+      .button-group {
+        margin-top: 10px;
+      }
+
+      .button-group .my-button {
+        margin-right: 10px;
+        margin-bottom: 10px;
+      }
+    </style>
+  </body>
+</html>
