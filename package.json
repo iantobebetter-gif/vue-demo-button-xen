@@ -1,7 +1,7 @@
 {
   "name": "vue-demo-button-xen",
-  "version": "1.2.0",
-  "description": "一个Vue按钮组件插件，可发布到npm",
+  "version": "1.3.0",
+  "description": "XEN的自有组件库",
   "main": "dist/vue-demo-button.js",
   "scripts": {
     "build": "webpack --mode production",
