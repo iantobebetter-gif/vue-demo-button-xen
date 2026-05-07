@@ -7,7 +7,7 @@
 
 <script>
 export default {
-  name: "MyButton",
+  name: "XENButton",
   props: {
     type: {
       type: String,

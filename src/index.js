@@ -1,14 +1,14 @@
-import MyButton from './components/MyButton.vue';
+import XENButton from './components/XENButton.vue';
 
-const XENButton = {
+const XENButtonPlugin = {
   install(Vue) {
-    Vue.component('MyButton', MyButton);
+    Vue.component('XENButton', XENButton);
   }
 };
 
 if (typeof window !== 'undefined' && window.Vue) {
-  window.Vue.use(XENButton);
+  window.Vue.use(XENButtonPlugin);
 }
 
-export default XENButton;
-export { MyButton };
+export default XENButtonPlugin;
+export { XENButton };
